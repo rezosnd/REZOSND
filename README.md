@@ -19,8 +19,5 @@
 ---
 [![](https://visitcount.itsvg.in/api?id=rezosnd&icon=10&color=4)](https://visitcount.itsvg.in)
 <table>
-  <tr>
-    <td>You're visit </td>
-    <td><img src="https://profile-counter.glitch.me/rezosnd/count.svg" alt="visitor count" height="30" width="224" /></td>
-  </tr>
+
 </table>
