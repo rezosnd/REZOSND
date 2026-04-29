@@ -33,7 +33,7 @@
 # ═══════════════════════════════════════════════════════════════
 
 class SouravND:
-    name         = "Sourav ND"
+    name         = "Rehan Suman"
     alias        = "rezosnd"
     institution  = "KIIT University, Bhubaneswar"
     degree       = "B.Tech — Information Technology"
