@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,40:302b63,80:7c3aed,100:a855f7&height=220&section=header&text=SOURAV%20ND&fontSize=78&fontColor=ffffff&fontAlignY=36&desc=rezosnd%20%E2%80%94%20Engineering%20Tomorrow%2C%20Today&descSize=18&descAlignY=58&animation=twinkling" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,30:1a0533,60:7c3aed,100:c026d3&height=240&section=header&text=REZOSND&fontSize=90&fontColor=ffffff&fontAlignY=38&desc=%E2%96%B8%20Neural%20Architect%20%7C%20Autonomous%20Systems%20%7C%20Edge%20Intelligence%20%E2%97%82&descSize=16&descAlignY=60&animation=twinkling" width="100%"/>
 
 <br/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&pause=1200&color=A855F7&background=00000000&center=true&vCenter=true&width=700&height=42&lines=B.Tech+Information+Technology+%40+KIIT+University;Full-Stack+Developer+%E2%80%94+MERN+%2B+Next.js+%2B+TypeScript;Robotics+%26+Autonomous+Systems+Engineer;IoT+%2B+Embedded+Systems+%2B+Edge+Computing;NLP+%2B+Computer+Vision+%2B+ML+Engineer" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1000&color=C026D3&background=00000000&center=true&vCenter=true&width=780&height=48&lines=%5B+REZOSND+%5D+%E2%80%94+System+Online+%E2%9C%94;Neural+Architect+%7C+KIIT+University+%E2%80%94+B.Tech+IT;Full-Stack+%2B+AI+%2B+Robotics+%2B+Edge+Computing;Building+Machines+That+Think%2C+Learn+%26+Adapt;Turning+Ideas+Into+Autonomous+Realities;%3E%3E+git+push+origin+the-future+--force" alt="Typing SVG"/>
 </a>
 
 <br/><br/>
@@ -28,17 +28,19 @@
 
 ```python
 #!/usr/bin/env python3
-# ═══════════════════════════════════════════════════════════════
-#   REZOSND.PY  —  Developer Identity Module  —  India 🇮🇳
-# ═══════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════════════
+#   REZOSND.PY  —  Neural Identity Module v2.0  —  India 🇮🇳
+#   STATUS: ONLINE | UPTIME: ∞ | THREAT-LEVEL: INNOVATION
+# ═══════════════════════════════════════════════════════════════════════
 
-class SouravND:
-    name         = "Rezosnd"
+class REZOSND:
+    name         = "REZOSND"
     alias        = "rezosnd"
     institution  = "KIIT University, Bhubaneswar"
     degree       = "B.Tech — Information Technology"
     location     = "India 🇮🇳"
     status       = "Turning caffeine into commits since day one"
+    mode         = "[ HYPERACTIVE BUILDER — NO SLEEP.EXE FOUND ]"
 
     stack = {
         "languages"  : ["Python", "C++", "JavaScript", "TypeScript"],
@@ -55,17 +57,51 @@ class SouravND:
         "🌐  Crafting full-stack web experiences",
         "🧠  Exploring Large Language Models",
         "🛸  Pushing the edge of edge computing",
+        "🔮  Engineering what doesn't exist — yet",
     ]
 
-me = SouravND()
-print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
+    def __repr__(self):
+        return f"<REZOSND :: Neural Architect | Autonomous Systems | Edge AI />"
+
+me = REZOSND()
+print(f"[ BOOT ] Identity loaded — {me.alias} is online. Let's build what doesn't exist yet.")
 ```
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ---
 
-## `⟨ 002 ⟩` &nbsp; ANIMATED LANDSCAPE 🌄
+## `⟨ 002 ⟩` &nbsp; SYSTEM BOOT SEQUENCE 🖥️
+
+<div align="center">
+
+```
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║   ██████╗ ███████╗███████╗ ██████╗ ███████╗███╗   ██╗██████╗            ║
+║   ██╔══██╗██╔════╝╚══███╔╝██╔═══██╗██╔════╝████╗  ██║██╔══██╗           ║
+║   ██████╔╝█████╗    ███╔╝ ██║   ██║███████╗██╔██╗ ██║██║  ██║           ║
+║   ██╔══██╗██╔══╝   ███╔╝  ██║   ██║╚════██║██║╚██╗██║██║  ██║           ║
+║   ██║  ██║███████╗███████╗╚██████╔╝███████║██║ ╚████║██████╔╝           ║
+║   ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═════╝            ║
+║                                                                          ║
+║   [ NEURAL ARCHITECT — AUTONOMOUS SYSTEMS — EDGE INTELLIGENCE ]         ║
+║                                                                          ║
+║   > BOOT .......... [████████████████████] 100%  ✓                      ║
+║   > MODULES ....... AI / ML / ROBOTICS / WEB / IOT  ✓                  ║
+║   > CAFFEINE ...... CRITICAL LEVELS DETECTED  ⚡                        ║
+║   > STATUS ........ READY TO BUILD THE FUTURE                           ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+```
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+---
+
+## `⟨ 003 ⟩` &nbsp; ANIMATED LANDSCAPE 🌄
 
 <div align="center">
 
@@ -83,7 +119,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 003 ⟩` &nbsp; TECH ARSENAL
+## `⟨ 004 ⟩` &nbsp; TECH ARSENAL
 
 <div align="center">
 
@@ -131,7 +167,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 004 ⟩` &nbsp; MISSION DOMAINS
+## `⟨ 005 ⟩` &nbsp; MISSION DOMAINS
 
 <div align="center">
 <table>
@@ -202,7 +238,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 005 ⟩` &nbsp; PERFORMANCE METRICS
+## `⟨ 006 ⟩` &nbsp; PERFORMANCE METRICS
 
 <div align="center">
 
@@ -225,7 +261,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 006 ⟩` &nbsp; TROPHIES & ACHIEVEMENTS
+## `⟨ 007 ⟩` &nbsp; TROPHIES & ACHIEVEMENTS
 
 <div align="center">
 
@@ -237,7 +273,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 007 ⟩` &nbsp; CONTRIBUTION GRID SNAKE 🐍
+## `⟨ 008 ⟩` &nbsp; CONTRIBUTION GRID SNAKE 🐍
 
 <div align="center">
 
@@ -253,7 +289,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 008 ⟩` &nbsp; TOP CONTRIBUTIONS
+## `⟨ 009 ⟩` &nbsp; TOP CONTRIBUTIONS
 
 <div align="center">
 
@@ -265,19 +301,24 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 009 ⟩` &nbsp; CURRENTLY EXPLORING
+## `⟨ 010 ⟩` &nbsp; ACTIVE MISSION LOG 📡
 
 <div align="center">
 
 ```
-┌──────────────────────────────────────────────────────────────────────┐
-│                                                                      │
-│   📡  Reading  :  Attention Is All You Need  (Vaswani et al.)       │
-│   🔨  Building :  Autonomous Vision-Guided Robot with PID + CV      │
-│   🧪  Learning :  Reinforcement Learning from Human Feedback        │
-│   🌍  Goal     :  Open-source contributions to AI + Robotics        │
-│                                                                      │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    ◈  REZOSND — MISSION CONTROL  ◈                     │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  📡  READING   :  Attention Is All You Need  (Vaswani et al.)          │
+│  🔨  BUILDING  :  Autonomous Vision-Guided Robot w/ PID + CV           │
+│  🧪  LEARNING  :  Reinforcement Learning from Human Feedback           │
+│  🌍  MISSION   :  Open-source contributions to AI + Robotics           │
+│  🚀  LAUNCHING :  Next-gen edge AI inference pipeline                  │
+│  🔮  VISION    :  Systems that sense, think, act — independently       │
+│                                                                         │
+│  [ UPTIME: ∞ ] [ MODE: HYPERFOCUS ] [ THREAT: INNOVATION ]            │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
@@ -286,7 +327,7 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 
 ---
 
-## `⟨ 010 ⟩` &nbsp; CONNECT WITH ME
+## `⟨ 011 ⟩` &nbsp; CONNECT WITH ME
 
 <div align="center">
 
@@ -327,16 +368,25 @@ print(f"Hello, World. I am {me.alias} — let's build what doesn't exist yet.")
 <div align="center">
 
 ```
-╔═══════════════════════════════════════════════════════════════════╗
-║                                                                   ║
-║   "Any sufficiently advanced technology is indistinguishable     ║
-║    from magic."  — Arthur C. Clarke                               ║
-║                                                                   ║
-║   🌌  Let's build the magic. One commit at a time.              ║
-║                                                                   ║
-╚═══════════════════════════════════════════════════════════════════╝
+╔═════════════════════════════════════════════════════════════════════════╗
+║                                                                         ║
+║   ██████╗ ███████╗███████╗ ██████╗ ███████╗███╗   ██╗██████╗           ║
+║   ██╔══██╗██╔════╝╚══███╔╝██╔═══██╗██╔════╝████╗  ██║██╔══██╗          ║
+║   ██████╔╝█████╗    ███╔╝ ██║   ██║███████╗██╔██╗ ██║██║  ██║          ║
+║   ██╔══██╗██╔══╝   ███╔╝  ██║   ██║╚════██║██║╚██╗██║██║  ██║          ║
+║   ██║  ██║███████╗███████╗╚██████╔╝███████║██║ ╚████║██████╔╝          ║
+║   ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═════╝           ║
+║                                                                         ║
+║   "The best way to predict the future is to invent it."                ║
+║    — Alan Kay                                                           ║
+║                                                                         ║
+║   🌌  Building tomorrow's tech — one commit at a time.               ║
+║   🔮  Every line of code is a step into the unknown.                 ║
+║                                                                         ║
+║   [ REZOSND — NEURAL ARCHITECT — INDIA 🇮🇳 ]                         ║
+╚═════════════════════════════════════════════════════════════════════════╝
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:a855f7,50:7c3aed,100:0f0c29&height=140&section=footer&animation=twinkling" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:c026d3,30:7c3aed,70:302b63,100:0f0c29&height=160&section=footer&animation=twinkling" width="100%"/>
 
 </div>
