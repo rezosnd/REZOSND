@@ -1,408 +1,226 @@
-<svg width="100%" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" role="img">
-  <title>Animated nature landscape with birds, sun, trees and mountains</title>
-  <desc>A beautiful animated scene featuring a rising sun, flying birds, pine trees, rolling hills and mountains for Sourav ND's GitHub profile</desc>
-
-  <defs>
-    <!-- Sky gradient: deep purple to violet dawn -->
-    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0f0c29"/>
-      <stop offset="40%" stop-color="#302b63"/>
-      <stop offset="75%" stop-color="#553c9a"/>
-      <stop offset="100%" stop-color="#e96c2e" stop-opacity="0.5"/>
-    </linearGradient>
-
-    <!-- Sun glow -->
-    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#fff7aa"/>
-      <stop offset="40%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Sun halo -->
-    <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#f97316" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Mountain gradient -->
-    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4c1d95"/>
-      <stop offset="100%" stop-color="#1e1b4b"/>
-    </linearGradient>
-    <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5b21b6"/>
-      <stop offset="100%" stop-color="#312e81"/>
-    </linearGradient>
-    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6d28d9"/>
-      <stop offset="100%" stop-color="#4c1d95"/>
-    </linearGradient>
-
-    <!-- Ground -->
-    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#0f0c29"/>
-    </linearGradient>
-
-    <!-- River shimmer -->
-    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.2"/>
-      <stop offset="50%" stop-color="#c4b5fd" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.2"/>
-    </linearGradient>
-
-    <!-- Fog/mist -->
-    <linearGradient id="mistGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.0"/>
-    </linearGradient>
-
-    <!-- Star filter -->
-    <filter id="starBlur">
-      <feGaussianBlur stdDeviation="0.5"/>
-    </filter>
-
-    <!-- Glow filter for sun -->
-    <filter id="sunBlur">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
-
-    <!-- Tree clip -->
-    <clipPath id="sceneClip">
-      <rect x="0" y="0" width="900" height="320"/>
-    </clipPath>
-
-    <!-- Bird path animations -->
-    <style>
-      @keyframes birdFly1 {
-        0%   { transform: translate(-80px, 0px); }
-        100% { transform: translate(980px, -40px); }
-      }
-      @keyframes birdFly2 {
-        0%   { transform: translate(-120px, 0px); }
-        100% { transform: translate(980px, -20px); }
-      }
-      @keyframes birdFly3 {
-        0%   { transform: translate(-60px, 0px); }
-        100% { transform: translate(980px, -60px); }
-      }
-      @keyframes wingFlap {
-        0%, 100% { d: path("M0,0 Q-6,-5 -12,0 Q-6,2 0,0 Q6,-5 12,0 Q6,2 0,0"); }
-        50%       { d: path("M0,0 Q-6,2 -12,0 Q-6,-1 0,0 Q6,2 12,0 Q6,-1 0,0"); }
-      }
-      @keyframes wingFlap2 {
-        0%, 100% { d: path("M0,0 Q-4,-4 -8,0 Q-4,1 0,0 Q4,-4 8,0 Q4,1 0,0"); }
-        50%       { d: path("M0,0 Q-4,1 -8,0 Q-4,-1 0,0 Q4,1 8,0 Q4,-1 0,0"); }
-      }
-      @keyframes sunRise {
-        0%   { transform: translateY(30px); opacity: 0.4; }
-        100% { transform: translateY(0px); opacity: 1; }
-      }
-      @keyframes sunPulse {
-        0%, 100% { r: 22; }
-        50%       { r: 24; }
-      }
-      @keyframes haloPulse {
-        0%, 100% { r: 55; opacity: 0.5; }
-        50%       { r: 62; opacity: 0.7; }
-      }
-      @keyframes starTwinkle {
-        0%, 100% { opacity: 1; }
-        50%       { opacity: 0.2; }
-      }
-      @keyframes cloudDrift1 {
-        0%   { transform: translateX(0px); }
-        100% { transform: translateX(60px); }
-      }
-      @keyframes cloudDrift2 {
-        0%   { transform: translateX(0px); }
-        100% { transform: translateX(-40px); }
-      }
-      @keyframes riverShimmer {
-        0%, 100% { opacity: 0.4; }
-        50%       { opacity: 0.85; }
-      }
-      @keyframes mistDrift {
-        0%   { transform: translateX(0px) scaleX(1); opacity: 0.4; }
-        50%  { transform: translateX(15px) scaleX(1.05); opacity: 0.6; }
-        100% { transform: translateX(0px) scaleX(1); opacity: 0.4; }
-      }
-      @keyframes leafSway {
-        0%, 100% { transform: rotate(0deg); }
-        50%       { transform: rotate(2deg); }
-      }
-
-      .bird1 { animation: birdFly1 18s linear infinite; }
-      .bird2 { animation: birdFly2 22s linear 4s infinite; }
-      .bird3 { animation: birdFly3 26s linear 10s infinite; }
-      .wing  { animation: wingFlap 0.5s ease-in-out infinite; }
-      .wing2 { animation: wingFlap2 0.5s ease-in-out infinite; }
-      .sun-group { animation: sunRise 3s ease-out 0.5s both; }
-      .sun-core { animation: sunPulse 4s ease-in-out infinite; }
-      .sun-halo { animation: haloPulse 4s ease-in-out infinite; }
-      .cloud1 { animation: cloudDrift1 30s ease-in-out alternate infinite; }
-      .cloud2 { animation: cloudDrift2 40s ease-in-out alternate infinite; }
-      .river  { animation: riverShimmer 3s ease-in-out infinite; }
-      .mist   { animation: mistDrift 8s ease-in-out infinite; }
-      .pine-group { animation: leafSway 6s ease-in-out infinite; transform-origin: center bottom; }
-      .pine-group2 { animation: leafSway 7s ease-in-out 1s infinite; transform-origin: center bottom; }
-
-      .star1 { animation: starTwinkle 2.1s ease-in-out infinite; }
-      .star2 { animation: starTwinkle 3.4s ease-in-out 0.7s infinite; }
-      .star3 { animation: starTwinkle 1.8s ease-in-out 1.2s infinite; }
-      .star4 { animation: starTwinkle 2.8s ease-in-out 0.3s infinite; }
-      .star5 { animation: starTwinkle 4.0s ease-in-out 1.8s infinite; }
-
-      @media (prefers-reduced-motion: reduce) {
-        .bird1,.bird2,.bird3,.sun-group,.sun-core,.sun-halo,
-        .cloud1,.cloud2,.river,.mist,.pine-group,.pine-group2,
-        .star1,.star2,.star3,.star4,.star5 { animation: none; }
-      }
-    </style>
-  </defs>
-
-  <g clip-path="url(#sceneClip)">
-
-    <!-- ──────── SKY ──────── -->
-    <rect x="0" y="0" width="900" height="320" fill="url(#skyGrad)"/>
-
-    <!-- ──────── STARS ──────── -->
-    <circle class="star1" cx="80"  cy="22" r="1.2" fill="#e2e8f0" filter="url(#starBlur)"/>
-    <circle class="star2" cx="160" cy="15" r="1.0" fill="#c4b5fd" filter="url(#starBlur)"/>
-    <circle class="star3" cx="260" cy="30" r="1.5" fill="#fef3c7" filter="url(#starBlur)"/>
-    <circle class="star4" cx="400" cy="10" r="1.2" fill="#e2e8f0" filter="url(#starBlur)"/>
-    <circle class="star5" cx="540" cy="25" r="1.0" fill="#c4b5fd" filter="url(#starBlur)"/>
-    <circle class="star1" cx="680" cy="18" r="1.3" fill="#fef3c7" filter="url(#starBlur)"/>
-    <circle class="star3" cx="780" cy="8"  r="1.1" fill="#e2e8f0" filter="url(#starBlur)"/>
-    <circle class="star2" cx="840" cy="30" r="1.4" fill="#c4b5fd" filter="url(#starBlur)"/>
-    <circle class="star4" cx="50"  cy="50" r="0.9" fill="#fef3c7" filter="url(#starBlur)"/>
-    <circle class="star5" cx="320" cy="45" r="1.0" fill="#e2e8f0" filter="url(#starBlur)"/>
-    <circle class="star1" cx="600" cy="40" r="0.8" fill="#c4b5fd" filter="url(#starBlur)"/>
-    <circle class="star3" cx="720" cy="55" r="1.2" fill="#fef3c7" filter="url(#starBlur)"/>
-
-    <!-- ──────── SUN (rising glow) ──────── -->
-    <g class="sun-group" style="transform-origin: 450px 108px;">
-      <!-- outer halo glow -->
-      <ellipse cx="450" cy="108" rx="80" ry="70" fill="url(#haloGrad)" filter="url(#sunBlur)" opacity="0.5"/>
-      <!-- soft halo ring -->
-      <circle class="sun-halo" cx="450" cy="108" r="55" fill="none" stroke="#f97316" stroke-width="18" stroke-opacity="0.12"/>
-      <!-- sun disk -->
-      <circle class="sun-core" cx="450" cy="108" r="22" fill="url(#sunGrad)"/>
-      <!-- sun rays (static thin lines) -->
-      <g stroke="#fbbf24" stroke-width="1.2" stroke-linecap="round" opacity="0.55">
-        <line x1="450" y1="74"  x2="450" y2="64"/>
-        <line x1="450" y1="142" x2="450" y2="152"/>
-        <line x1="416" y1="108" x2="406" y2="108"/>
-        <line x1="484" y1="108" x2="494" y2="108"/>
-        <line x1="426" y1="84"  x2="419" y2="77"/>
-        <line x1="474" y1="84"  x2="481" y2="77"/>
-        <line x1="426" y1="132" x2="419" y2="139"/>
-        <line x1="474" y1="132" x2="481" y2="139"/>
-      </g>
-    </g>
-
-    <!-- ──────── CLOUDS ──────── -->
-    <!-- Cloud 1 -->
-    <g class="cloud1" opacity="0.55">
-      <ellipse cx="170" cy="68" rx="50" ry="18" fill="#c4b5fd" opacity="0.5"/>
-      <ellipse cx="140" cy="74" rx="32" ry="14" fill="#a78bfa" opacity="0.4"/>
-      <ellipse cx="200" cy="72" rx="35" ry="13" fill="#c4b5fd" opacity="0.45"/>
-    </g>
-    <!-- Cloud 2 -->
-    <g class="cloud2" opacity="0.45">
-      <ellipse cx="720" cy="55" rx="55" ry="16" fill="#ddd6fe" opacity="0.4"/>
-      <ellipse cx="690" cy="60" rx="36" ry="13" fill="#c4b5fd" opacity="0.35"/>
-      <ellipse cx="750" cy="58" rx="38" ry="12" fill="#ddd6fe" opacity="0.4"/>
-    </g>
-    <!-- Cloud 3 small -->
-    <g opacity="0.3">
-      <ellipse cx="580" cy="80" rx="38" ry="12" fill="#ede9fe" opacity="0.4"/>
-      <ellipse cx="560" cy="84" rx="24" ry="10" fill="#c4b5fd" opacity="0.3"/>
-    </g>
-
-    <!-- ──────── BACK MOUNTAINS ──────── -->
-    <!-- Far mountains (lightest) -->
-    <polygon points="0,240 100,130 200,210 280,150 380,200 460,155 540,195 620,145 700,195 780,140 900,200 900,240" fill="#2e1065" opacity="0.5"/>
-    <!-- Mid mountains -->
-    <polygon points="0,260 80,160 160,220 250,170 340,215 430,165 520,210 600,155 700,210 790,160 900,215 900,260" fill="url(#mtn1)"/>
-    <!-- Front mountains -->
-    <polygon points="0,280 60,190 140,240 220,185 320,235 420,175 500,230 600,170 700,225 800,175 900,230 900,280" fill="url(#mtn2)"/>
-    <!-- Snow caps -->
-    <polygon points="60,190 80,175 100,190" fill="#e2e8f0" opacity="0.85"/>
-    <polygon points="220,185 240,168 260,185" fill="#e2e8f0" opacity="0.75"/>
-    <polygon points="420,175 450,155 475,175" fill="#e2e8f0" opacity="0.8"/>
-    <polygon points="600,170 625,150 650,170" fill="#e2e8f0" opacity="0.75"/>
-    <polygon points="800,175 820,158 840,175" fill="#e2e8f0" opacity="0.8"/>
-
-    <!-- ──────── MIST LAYER ──────── -->
-    <g class="mist">
-      <rect x="0" y="255" width="900" height="35" fill="url(#mistGrad)" rx="8"/>
-    </g>
-
-    <!-- ──────── GROUND / ROLLING HILLS ──────── -->
-    <!-- Hill back -->
-    <path d="M0,285 Q150,255 300,275 Q450,295 600,265 Q750,240 900,270 L900,320 L0,320 Z" fill="url(#groundGrad)" opacity="0.85"/>
-    <!-- Hill front -->
-    <path d="M0,300 Q200,280 400,295 Q600,310 800,290 Q860,285 900,295 L900,320 L0,320 Z" fill="#1e1b4b"/>
-
-    <!-- ──────── RIVER / WATER ──────── -->
-    <ellipse class="river" cx="450" cy="300" rx="190" ry="8" fill="url(#riverGrad)"/>
-    <ellipse class="river" cx="450" cy="304" rx="120" ry="4" fill="#c4b5fd" opacity="0.2"/>
-
-    <!-- ──────── PINE TREES (LEFT SIDE) ──────── -->
-    <g class="pine-group">
-      <!-- trunk -->
-      <rect x="97" y="252" width="6" height="28" fill="#3b1f0e"/>
-      <!-- pine layers (bottom to top, widening) -->
-      <polygon points="100,254 78,284 122,284" fill="#14532d"/>
-      <polygon points="100,242 82,268 118,268" fill="#166534"/>
-      <polygon points="100,232 86,255 114,255" fill="#15803d"/>
-      <polygon points="100,224 89,244 111,244" fill="#16a34a"/>
-    </g>
-    <g class="pine-group2" style="transform-origin: 70px 280px;">
-      <rect x="67" y="258" width="5" height="22" fill="#3b1f0e"/>
-      <polygon points="70,260 52,282 88,282" fill="#14532d"/>
-      <polygon points="70,250 55,268 85,268" fill="#166534"/>
-      <polygon points="70,242 58,257 82,257" fill="#15803d"/>
-      <polygon points="70,235 61,248 79,248" fill="#16a34a"/>
-    </g>
-    <!-- Smaller pine far left -->
-    <g>
-      <rect x="27" y="264" width="4" height="16" fill="#3b1f0e"/>
-      <polygon points="29,265 15,280 43,280" fill="#14532d"/>
-      <polygon points="29,258 18,272 40,272" fill="#166534"/>
-      <polygon points="29,252 20,264 38,264" fill="#15803d"/>
-    </g>
-
-    <!-- ──────── PINE TREES (RIGHT SIDE) ──────── -->
-    <g class="pine-group2">
-      <rect x="803" y="252" width="6" height="28" fill="#3b1f0e"/>
-      <polygon points="806,254 784,284 828,284" fill="#14532d"/>
-      <polygon points="806,242 788,268 824,268" fill="#166534"/>
-      <polygon points="806,232 792,255 820,255" fill="#15803d"/>
-      <polygon points="806,224 795,244 817,244" fill="#16a34a"/>
-    </g>
-    <g class="pine-group">
-      <rect x="833" y="258" width="5" height="22" fill="#3b1f0e"/>
-      <polygon points="835,260 817,282 853,282" fill="#14532d"/>
-      <polygon points="835,250 820,268 850,268" fill="#166534"/>
-      <polygon points="835,242 823,257 847,257" fill="#15803d"/>
-      <polygon points="835,235 826,248 844,248" fill="#16a34a"/>
-    </g>
-    <!-- Tall pine far right -->
-    <g>
-      <rect x="868" y="248" width="6" height="32" fill="#3b1f0e"/>
-      <polygon points="871,250 849,284 893,284" fill="#14532d"/>
-      <polygon points="871,238 853,266 889,266" fill="#166534"/>
-      <polygon points="871,228 856,251 886,251" fill="#15803d"/>
-      <polygon points="871,220 858,241 884,241" fill="#16a34a"/>
-      <polygon points="871,214 861,232 881,232" fill="#22c55e" opacity="0.8"/>
-    </g>
-
-    <!-- ──────── MID-GROUND TREES ──────── -->
-    <!-- Center-left tree cluster -->
-    <g class="pine-group" style="transform-origin:200px 285px;">
-      <rect x="197" y="263" width="5" height="17" fill="#3b1f0e"/>
-      <polygon points="200,265 183,282 217,282" fill="#14532d" opacity="0.9"/>
-      <polygon points="200,256 186,270 214,270" fill="#166534" opacity="0.9"/>
-      <polygon points="200,249 189,261 211,261" fill="#15803d" opacity="0.9"/>
-    </g>
-    <!-- Center-right tree -->
-    <g class="pine-group2" style="transform-origin:680px 285px;">
-      <rect x="677" y="263" width="5" height="17" fill="#3b1f0e"/>
-      <polygon points="680,265 663,282 697,282" fill="#14532d" opacity="0.9"/>
-      <polygon points="680,256 666,270 694,270" fill="#166534" opacity="0.9"/>
-      <polygon points="680,249 669,261 691,261" fill="#15803d" opacity="0.9"/>
-    </g>
-
-    <!-- ──────── FLYING BIRDS ──────── -->
-    <!-- Bird 1 (large, leading) -->
-    <g class="bird1">
-      <g transform="translate(80, 90)">
-        <path class="wing" d="M0,0 Q-6,-5 -12,0 Q-6,2 0,0 Q6,-5 12,0 Q6,2 0,0" fill="#1e1b4b" stroke="#7c3aed" stroke-width="0.5"/>
-        <ellipse cx="0" cy="0" rx="2" ry="1.2" fill="#2e1065"/>
-      </g>
-    </g>
-    <!-- Bird 1b (tight formation) -->
-    <g class="bird1">
-      <g transform="translate(60, 98)">
-        <path class="wing2" d="M0,0 Q-4,-4 -8,0 Q-4,1 0,0 Q4,-4 8,0 Q4,1 0,0" fill="#2e1065" stroke="#a855f7" stroke-width="0.4"/>
-      </g>
-    </g>
-    <g class="bird1">
-      <g transform="translate(40, 104)">
-        <path class="wing2" d="M0,0 Q-4,-4 -8,0 Q-4,1 0,0 Q4,-4 8,0 Q4,1 0,0" fill="#2e1065" stroke="#a855f7" stroke-width="0.4"/>
-      </g>
-    </g>
-
-    <!-- Bird 2 (medium group, delayed) -->
-    <g class="bird2">
-      <g transform="translate(120, 70)">
-        <path class="wing" d="M0,0 Q-5,-4 -10,0 Q-5,1.5 0,0 Q5,-4 10,0 Q5,1.5 0,0" fill="#1e1b4b" stroke="#7c3aed" stroke-width="0.5"/>
-      </g>
-    </g>
-    <g class="bird2">
-      <g transform="translate(100, 80)">
-        <path class="wing2" d="M0,0 Q-4,-3 -8,0 Q-4,1 0,0 Q4,-3 8,0 Q4,1 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.4"/>
-      </g>
-    </g>
-    <g class="bird2">
-      <g transform="translate(88, 87)">
-        <path class="wing2" d="M0,0 Q-3,-3 -6,0 Q-3,1 0,0 Q3,-3 6,0 Q3,1 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.3"/>
-      </g>
-    </g>
-
-    <!-- Bird 3 (small distant flock) -->
-    <g class="bird3">
-      <g transform="translate(200, 55)">
-        <path class="wing2" d="M0,0 Q-3,-2 -6,0 Q-3,0.8 0,0 Q3,-2 6,0 Q3,0.8 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.3"/>
-      </g>
-    </g>
-    <g class="bird3">
-      <g transform="translate(185, 62)">
-        <path class="wing2" d="M0,0 Q-2.5,-2 -5,0 Q-2.5,0.8 0,0 Q2.5,-2 5,0 Q2.5,0.8 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.3"/>
-      </g>
-    </g>
-    <g class="bird3">
-      <g transform="translate(170, 67)">
-        <path class="wing2" d="M0,0 Q-2,-2 -4,0 Q-2,0.6 0,0 Q2,-2 4,0 Q2,0.6 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.25"/>
-      </g>
-    </g>
-    <g class="bird3">
-      <g transform="translate(158, 71)">
-        <path class="wing2" d="M0,0 Q-2,-2 -4,0 Q-2,0.6 0,0 Q2,-2 4,0 Q2,0.6 0,0" fill="#4c1d95" stroke="#8b5cf6" stroke-width="0.25"/>
-      </g>
-    </g>
-
-    <!-- ──────── MOON (crescent, top-left) ──────── -->
-    <g opacity="0.75">
-      <circle cx="120" cy="38" r="14" fill="#fef3c7" opacity="0.9"/>
-      <circle cx="126" cy="34" r="12" fill="#0f0c29"/>
-    </g>
-
-    <!-- ──────── FOREGROUND GRASS BLADES ──────── -->
-    <g stroke="#14532d" stroke-width="1.2" stroke-linecap="round" opacity="0.7">
-      <line x1="20"  y1="318" x2="18"  y2="306"/>
-      <line x1="25"  y1="318" x2="28"  y2="305"/>
-      <line x1="35"  y1="318" x2="33"  y2="308"/>
-      <line x1="150" y1="318" x2="148" y2="307"/>
-      <line x1="158" y1="318" x2="161" y2="306"/>
-      <line x1="300" y1="318" x2="298" y2="309"/>
-      <line x1="310" y1="318" x2="313" y2="308"/>
-      <line x1="500" y1="318" x2="498" y2="307"/>
-      <line x1="508" y1="318" x2="511" y2="309"/>
-      <line x1="650" y1="318" x2="648" y2="308"/>
-      <line x1="660" y1="318" x2="663" y2="307"/>
-      <line x1="750" y1="318" x2="748" y2="309"/>
-      <line x1="760" y1="318" x2="763" y2="308"/>
-      <line x1="870" y1="318" x2="868" y2="307"/>
-      <line x1="880" y1="318" x2="883" y2="308"/>
-    </g>
-
-    <!-- ──────── FIREFLIES / LIGHT DOTS (foreground) ──────── -->
-    <circle class="star1" cx="320" cy="290" r="1.5" fill="#fde68a" opacity="0.8" filter="url(#starBlur)"/>
-    <circle class="star3" cx="580" cy="285" r="1.2" fill="#fde68a" opacity="0.7" filter="url(#starBlur)"/>
-    <circle class="star2" cx="420" cy="295" r="1.0" fill="#fde68a" opacity="0.65" filter="url(#starBlur)"/>
-
+<svg width="100%" viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Sourav ND animated profile banner</title>
+<desc>Animated night-to-dawn landscape with shooting stars, aurora, mountains, pine trees, river, birds and glowing sun for Sourav ND GitHub profile</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#03001e"/>
+    <stop offset="35%" stop-color="#1a0533"/>
+    <stop offset="65%" stop-color="#3d1560"/>
+    <stop offset="85%" stop-color="#7c2d92" stop-opacity="0.7"/>
+    <stop offset="100%" stop-color="#f97316" stop-opacity="0.45"/>
+  </linearGradient>
+  <linearGradient id="aurora1" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#06b6d4" stop-opacity="0.25"/>
+    <stop offset="60%" stop-color="#a855f7" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="aurora2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#a855f7" stop-opacity="0"/>
+    <stop offset="40%" stop-color="#ec4899" stop-opacity="0.2"/>
+    <stop offset="70%" stop-color="#06b6d4" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="suncore" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#fff7aa"/>
+    <stop offset="35%" stop-color="#fde68a"/>
+    <stop offset="70%" stop-color="#fb923c"/>
+    <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="sunhalo" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#fb923c" stop-opacity="0.4"/>
+    <stop offset="60%" stop-color="#f97316" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="moongrad" cx="40%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#fef9c3"/>
+    <stop offset="100%" stop-color="#fde68a"/>
+  </radialGradient>
+  <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2e1065"/>
+    <stop offset="100%" stop-color="#0f0c29"/>
+  </linearGradient>
+  <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4c1d95"/>
+    <stop offset="100%" stop-color="#1e1b4b"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1e1b4b"/>
+    <stop offset="100%" stop-color="#03001e"/>
+  </linearGradient>
+  <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.1"/>
+    <stop offset="25%" stop-color="#c4b5fd" stop-opacity="0.7"/>
+    <stop offset="50%" stop-color="#e0e7ff" stop-opacity="0.9"/>
+    <stop offset="75%" stop-color="#c4b5fd" stop-opacity="0.7"/>
+    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.1"/>
+  </linearGradient>
+  <clipPath id="clip"><rect x="0" y="0" width="900" height="340"/></clipPath>
+  <style>
+    @keyframes shootStar1{0%{transform:translate(0,0);opacity:1}70%{opacity:0.8}100%{transform:translate(220px,110px);opacity:0}}
+    @keyframes shootStar2{0%{transform:translate(0,0);opacity:1}60%{opacity:0.9}100%{transform:translate(180px,90px);opacity:0}}
+    @keyframes shootStar3{0%{transform:translate(0,0);opacity:0.9}65%{opacity:0.7}100%{transform:translate(160px,80px);opacity:0}}
+    @keyframes twinkle1{0%,100%{opacity:1;r:1.4}50%{opacity:0.15;r:0.8}}
+    @keyframes twinkle2{0%,100%{opacity:0.8;r:1.1}50%{opacity:0.1;r:0.5}}
+    @keyframes twinkle3{0%,100%{opacity:0.9;r:1.6}50%{opacity:0.2;r:0.9}}
+    @keyframes aurora1anim{0%,100%{d:path("M0,80 Q150,40 300,70 Q450,100 600,55 Q750,20 900,65 L900,120 Q750,80 600,110 Q450,140 300,105 Q150,75 0,115Z");opacity:0.5}50%{d:path("M0,90 Q150,55 300,85 Q450,115 600,68 Q750,35 900,78 L900,130 Q750,90 600,122 Q450,152 300,115 Q150,85 0,125Z");opacity:0.7}}
+    @keyframes aurora2anim{0%,100%{d:path("M0,105 Q200,65 400,90 Q600,115 800,72 Q870,58 900,80 L900,145 Q870,120 800,135 Q600,165 400,135 Q200,108 0,148Z");opacity:0.4}50%{d:path("M0,115 Q200,78 400,102 Q600,128 800,85 Q870,70 900,92 L900,158 Q870,132 800,148 Q600,178 400,148 Q200,120 0,160Z");opacity:0.6}}
+    @keyframes sunPulse{0%,100%{r:26}50%{r:29}}
+    @keyframes haloPulse{0%,100%{r:68;opacity:0.45}50%{r:78;opacity:0.65}}
+    @keyframes sunRise{0%{transform:translateY(28px);opacity:0}100%{transform:translateY(0);opacity:1}}
+    @keyframes moonGlow{0%,100%{opacity:0.88}50%{opacity:1}}
+    @keyframes birdFly1{0%{transform:translate(-100px,0)}100%{transform:translate(1010px,-50px)}}
+    @keyframes birdFly2{0%{transform:translate(-140px,0)}100%{transform:translate(1010px,-30px)}}
+    @keyframes birdFly3{0%{transform:translate(-80px,0)}100%{transform:translate(1010px,-70px)}}
+    @keyframes wingA{0%,100%{d:path("M0,0 Q-8,-6 -15,0 Q-8,3 0,0 Q8,-6 15,0 Q8,3 0,0")}50%{d:path("M0,0 Q-8,3 -15,0 Q-8,-2 0,0 Q8,3 15,0 Q8,-2 0,0")}}
+    @keyframes wingB{0%,100%{d:path("M0,0 Q-5,-4 -10,0 Q-5,2 0,0 Q5,-4 10,0 Q5,2 0,0")}50%{d:path("M0,0 Q-5,2 -10,0 Q-5,-1 0,0 Q5,2 10,0 Q5,-1 0,0")}}
+    @keyframes wingC{0%,100%{d:path("M0,0 Q-3,-3 -7,0 Q-3,1.5 0,0 Q3,-3 7,0 Q3,1.5 0,0")}50%{d:path("M0,0 Q-3,1.5 -7,0 Q-3,-1 0,0 Q3,1.5 7,0 Q3,-1 0,0")}}
+    @keyframes pineSway1{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1.8deg)}}
+    @keyframes pineSway2{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-1.5deg)}}
+    @keyframes riverShimmer{0%,100%{opacity:0.5}50%{opacity:1}}
+    @keyframes mistDrift{0%,100%{transform:translateX(0)scaleX(1);opacity:0.35}50%{transform:translateX(18px)scaleX(1.04);opacity:0.55}}
+    @keyframes firefly{0%,100%{opacity:0;r:1.5}40%,60%{opacity:1;r:2}}
+    @keyframes nameFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+    .ss1{animation:shootStar1 5s ease-out 1s infinite}
+    .ss2{animation:shootStar2 7s ease-out 3.5s infinite}
+    .ss3{animation:shootStar3 6s ease-out 6s infinite}
+    .tw1{animation:twinkle1 2.2s ease-in-out infinite}
+    .tw2{animation:twinkle2 3.1s ease-in-out 0.6s infinite}
+    .tw3{animation:twinkle3 1.9s ease-in-out 1.3s infinite}
+    .tw4{animation:twinkle1 4.0s ease-in-out 0.9s infinite}
+    .tw5{animation:twinkle2 2.7s ease-in-out 1.8s infinite}
+    .au1{animation:aurora1anim 8s ease-in-out infinite}
+    .au2{animation:aurora2anim 10s ease-in-out 2s infinite}
+    .sun-g{animation:sunRise 2.5s ease-out 0.3s both}
+    .sun-c{animation:sunPulse 3.5s ease-in-out infinite}
+    .sun-h{animation:haloPulse 3.5s ease-in-out infinite}
+    .moon{animation:moonGlow 4s ease-in-out infinite}
+    .b1{animation:birdFly1 16s linear infinite}
+    .b2{animation:birdFly2 20s linear 5s infinite}
+    .b3{animation:birdFly3 24s linear 11s infinite}
+    .wA{animation:wingA 0.45s ease-in-out infinite}
+    .wB{animation:wingB 0.45s ease-in-out infinite}
+    .wC{animation:wingC 0.5s ease-in-out infinite}
+    .p1{animation:pineSway1 5s ease-in-out infinite;transform-origin:center 290px}
+    .p2{animation:pineSway2 6.5s ease-in-out 1s infinite;transform-origin:center 290px}
+    .rv{animation:riverShimmer 2.8s ease-in-out infinite}
+    .mist{animation:mistDrift 9s ease-in-out infinite}
+    .ff1{animation:firefly 3.2s ease-in-out 0.5s infinite}
+    .ff2{animation:firefly 4.1s ease-in-out 1.8s infinite}
+    .ff3{animation:firefly 2.9s ease-in-out 0.2s infinite}
+    .nm{animation:nameFloat 3s ease-in-out infinite}
+    @media(prefers-reduced-motion:reduce){.ss1,.ss2,.ss3,.tw1,.tw2,.tw3,.tw4,.tw5,.au1,.au2,.sun-g,.sun-c,.sun-h,.moon,.b1,.b2,.b3,.wA,.wB,.wC,.p1,.p2,.rv,.mist,.ff1,.ff2,.ff3,.nm{animation:none}}
+  </style>
+</defs>
+<g clip-path="url(#clip)">
+<rect x="0" y="0" width="900" height="340" fill="url(#sky)"/>
+<path class="au1" d="M0,80 Q150,40 300,70 Q450,100 600,55 Q750,20 900,65 L900,120 Q750,80 600,110 Q450,140 300,105 Q150,75 0,115Z" fill="url(#aurora1)"/>
+<path class="au2" d="M0,105 Q200,65 400,90 Q600,115 800,72 Q870,58 900,80 L900,145 Q870,120 800,135 Q600,165 400,135 Q200,108 0,148Z" fill="url(#aurora2)"/>
+<circle class="tw3" cx="55"  cy="18" r="1.6" fill="#e0e7ff"/>
+<circle class="tw1" cx="130" cy="12" r="1.4" fill="#fef3c7"/>
+<circle class="tw2" cx="210" cy="28" r="1.1" fill="#c4b5fd"/>
+<circle class="tw4" cx="310" cy="8"  r="1.3" fill="#e0e7ff"/>
+<circle class="tw5" cx="395" cy="22" r="1.5" fill="#fef3c7"/>
+<circle class="tw1" cx="470" cy="10" r="1.0" fill="#c4b5fd"/>
+<circle class="tw3" cx="560" cy="30" r="1.4" fill="#e0e7ff"/>
+<circle class="tw2" cx="640" cy="15" r="1.2" fill="#fef3c7"/>
+<circle class="tw4" cx="720" cy="25" r="1.6" fill="#c4b5fd"/>
+<circle class="tw5" cx="810" cy="10" r="1.1" fill="#e0e7ff"/>
+<circle class="tw1" cx="870" cy="35" r="1.3" fill="#fef3c7"/>
+<circle class="tw3" cx="42"  cy="55" r="0.9" fill="#c4b5fd"/>
+<circle class="tw2" cx="185" cy="48" r="1.1" fill="#e0e7ff"/>
+<circle class="tw4" cx="355" cy="42" r="0.8" fill="#fef3c7"/>
+<circle class="tw5" cx="505" cy="50" r="1.0" fill="#c4b5fd"/>
+<circle class="tw1" cx="675" cy="44" r="0.9" fill="#e0e7ff"/>
+<circle class="tw3" cx="840" cy="52" r="1.2" fill="#fef3c7"/>
+<g class="ss1"><line x1="180" y1="32" x2="210" y2="22" stroke="#fef3c7" stroke-width="2" stroke-linecap="round" opacity="0.9"/><line x1="170" y1="37" x2="210" y2="22" stroke="#fef3c7" stroke-width="0.8" stroke-linecap="round" opacity="0.35"/></g>
+<g class="ss2"><line x1="550" y1="18" x2="578" y2="10" stroke="#e0e7ff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/><line x1="540" y1="23" x2="578" y2="10" stroke="#e0e7ff" stroke-width="0.7" stroke-linecap="round" opacity="0.3"/></g>
+<g class="ss3"><line x1="760" y1="28" x2="785" y2="18" stroke="#fef9c3" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/></g>
+<g class="moon">
+  <circle cx="112" cy="48" r="18" fill="url(#moongrad)"/>
+  <circle cx="120" cy="43" r="15" fill="#03001e"/>
+  <circle cx="102" cy="42" r="2"  fill="#fef9c3" opacity="0.3"/>
+  <circle cx="115" cy="55" r="1.5" fill="#fef9c3" opacity="0.2"/>
+</g>
+<g class="sun-g" style="transform-origin:460px 118px">
+  <circle class="sun-h" cx="460" cy="118" r="68" fill="url(#sunhalo)"/>
+  <circle class="sun-c" cx="460" cy="118" r="26" fill="url(#suncore)"/>
+  <g stroke="#fbbf24" stroke-width="1.4" stroke-linecap="round" opacity="0.6">
+    <line x1="460" y1="79"  x2="460" y2="68"/>
+    <line x1="460" y1="157" x2="460" y2="168"/>
+    <line x1="421" y1="118" x2="410" y2="118"/>
+    <line x1="499" y1="118" x2="510" y2="118"/>
+    <line x1="433" y1="91"  x2="425" y2="83"/>
+    <line x1="487" y1="91"  x2="495" y2="83"/>
+    <line x1="433" y1="145" x2="425" y2="153"/>
+    <line x1="487" y1="145" x2="495" y2="153"/>
   </g>
+</g>
+<polygon points="0,252 80,158 160,215 240,172 340,210 430,162 520,205 610,155 700,208 790,158 900,212 900,252" fill="#1a0533" opacity="0.6"/>
+<polygon points="80,158 95,144 110,158" fill="#e2e8f0" opacity="0.7"/>
+<polygon points="430,162 448,146 466,162" fill="#e2e8f0" opacity="0.65"/>
+<polygon points="790,158 808,142 826,158" fill="#e2e8f0" opacity="0.7"/>
+<polygon points="0,268 65,178 135,228 215,182 310,228 410,172 500,220 590,165 690,222 788,168 900,220 900,268" fill="url(#mtn1)"/>
+<polygon points="65,178 82,162 100,178" fill="#e2e8f0" opacity="0.8"/>
+<polygon points="215,182 234,164 252,182" fill="#e2e8f0" opacity="0.75"/>
+<polygon points="410,172 432,152 452,172" fill="#e2e8f0" opacity="0.82"/>
+<polygon points="590,165 612,144 632,165" fill="#e2e8f0" opacity="0.78"/>
+<polygon points="788,168 808,148 828,168" fill="#e2e8f0" opacity="0.8"/>
+<polygon points="0,285 55,198 120,244 200,195 295,242 400,182 490,234 580,175 680,232 775,180 870,232 900,218 900,285" fill="url(#mtn2)"/>
+<polygon points="55,198 74,180 92,198" fill="#f1f5f9" opacity="0.85"/>
+<polygon points="200,195 220,176 240,195" fill="#f1f5f9" opacity="0.8"/>
+<polygon points="400,182 424,160 446,182" fill="#f1f5f9" opacity="0.88"/>
+<polygon points="580,175 604,154 626,175" fill="#f1f5f9" opacity="0.82"/>
+<polygon points="775,180 798,160 820,180" fill="#f1f5f9" opacity="0.85"/>
+<g class="mist"><rect x="0" y="268" width="900" height="32" fill="#a78bfa" opacity="0.12" rx="4"/><rect x="0" y="278" width="900" height="18" fill="#c4b5fd" opacity="0.08" rx="4"/></g>
+<path d="M0,298 Q180,272 360,286 Q540,300 720,278 Q810,268 900,282 L900,340 L0,340Z" fill="url(#ground)"/>
+<path d="M0,312 Q200,298 400,308 Q600,318 800,302 L900,306 L900,340 L0,340Z" fill="#0f0c29"/>
+<ellipse class="rv" cx="450" cy="314" rx="210" ry="9" fill="url(#river)"/>
+<ellipse class="rv" cx="450" cy="319" rx="130" ry="5" fill="#e0e7ff" opacity="0.25"/>
+<g class="p1"><rect x="108" y="262" width="7" height="30" fill="#3b1f0e"/><polygon points="111.5,264 86,295 137,295" fill="#14532d"/><polygon points="111.5,252 90,278 133,278" fill="#166534"/><polygon points="111.5,242 93,265 130,265" fill="#15803d"/><polygon points="111.5,233 96,253 127,253" fill="#16a34a"/><polygon points="111.5,226 99,243 124,243" fill="#22c55e" opacity="0.85"/></g>
+<g class="p2"><rect x="76" y="268" width="6" height="24" fill="#3b1f0e"/><polygon points="79,270 57,292 101,292" fill="#14532d"/><polygon points="79,260 60,280 98,280" fill="#166534"/><polygon points="79,251 63,268 95,268" fill="#15803d"/><polygon points="79,244 65,258 93,258" fill="#16a34a"/></g>
+<g class="p1"><rect x="36" y="272" width="5" height="20" fill="#3b1f0e"/><polygon points="38.5,274 20,292 57,292" fill="#14532d" opacity="0.9"/><polygon points="38.5,265 23,281 54,281" fill="#166534" opacity="0.9"/><polygon points="38.5,258 25,272 52,272" fill="#15803d" opacity="0.9"/></g>
+<g class="p2"><rect x="792" y="262" width="7" height="30" fill="#3b1f0e"/><polygon points="795.5,264 770,295 821,295" fill="#14532d"/><polygon points="795.5,252 774,278 817,278" fill="#166534"/><polygon points="795.5,242 777,265 814,265" fill="#15803d"/><polygon points="795.5,233 780,253 811,253" fill="#16a34a"/><polygon points="795.5,226 783,243 808,243" fill="#22c55e" opacity="0.85"/></g>
+<g class="p1"><rect x="824" y="268" width="6" height="24" fill="#3b1f0e"/><polygon points="827,270 805,292 849,292" fill="#14532d"/><polygon points="827,260 808,280 846,280" fill="#166534"/><polygon points="827,251 811,268 843,268" fill="#15803d"/><polygon points="827,244 813,258 841,258" fill="#16a34a"/></g>
+<g class="p2"><rect x="858" y="256" width="8" height="36" fill="#3b1f0e"/><polygon points="862,258 834,295 890,295" fill="#14532d"/><polygon points="862,246 838,272 886,272" fill="#166534"/><polygon points="862,236 841,260 883,260" fill="#15803d"/><polygon points="862,228 844,249 880,249" fill="#16a34a"/><polygon points="862,221 847,238 877,238" fill="#22c55e" opacity="0.85"/></g>
+<g class="p1" style="transform-origin:215px 288px"><rect x="212" y="272" width="5" height="18" fill="#3b1f0e"/><polygon points="214.5,274 196,290 233,290" fill="#14532d" opacity="0.9"/><polygon points="214.5,264 199,279 230,279" fill="#166534" opacity="0.9"/><polygon points="214.5,257 202,269 227,269" fill="#15803d" opacity="0.9"/></g>
+<g class="p2" style="transform-origin:678px 288px"><rect x="675" y="272" width="5" height="18" fill="#3b1f0e"/><polygon points="677.5,274 659,290 696,290" fill="#14532d" opacity="0.9"/><polygon points="677.5,264 662,279 693,279" fill="#166534" opacity="0.9"/><polygon points="677.5,257 665,269 690,269" fill="#15803d" opacity="0.9"/></g>
+<circle class="ff1" cx="338" cy="300" r="1.5" fill="#fde68a"/>
+<circle class="ff2" cx="568" cy="294" r="1.5" fill="#fde68a"/>
+<circle class="ff3" cx="432" cy="306" r="1.5" fill="#fde68a"/>
+<circle class="ff1" cx="500" cy="298" r="1.2" fill="#fde68a"/>
+<circle class="ff2" cx="370" cy="310" r="1.2" fill="#fde68a"/>
+<g stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" opacity="0.65">
+  <line x1="22"  y1="338" x2="20"  y2="324"/><line x1="28"  y1="338" x2="31"  y2="323"/>
+  <line x1="160" y1="338" x2="158" y2="325"/><line x1="167" y1="338" x2="170" y2="326"/>
+  <line x1="302" y1="338" x2="300" y2="327"/><line x1="309" y1="338" x2="312" y2="326"/>
+  <line x1="496" y1="338" x2="494" y2="327"/><line x1="504" y1="338" x2="507" y2="326"/>
+  <line x1="636" y1="338" x2="634" y2="326"/><line x1="644" y1="338" x2="647" y2="325"/>
+  <line x1="752" y1="338" x2="750" y2="326"/><line x1="759" y1="338" x2="762" y2="327"/>
+  <line x1="878" y1="338" x2="876" y2="326"/><line x1="885" y1="338" x2="888" y2="327"/>
+</g>
+<g class="b1">
+  <g transform="translate(82,95)"><path class="wA" d="M0,0 Q-8,-6 -15,0 Q-8,3 0,0 Q8,-6 15,0 Q8,3 0,0" fill="#1e1b4b" stroke="#a855f7" stroke-width="0.6"/><ellipse cx="0" cy="0" rx="2.5" ry="1.2" fill="#2e1065"/></g>
+  <g transform="translate(62,104)"><path class="wB" d="M0,0 Q-5,-4 -10,0 Q-5,2 0,0 Q5,-4 10,0 Q5,2 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.5"/></g>
+  <g transform="translate(46,110)"><path class="wC" d="M0,0 Q-3,-3 -7,0 Q-3,1.5 0,0 Q3,-3 7,0 Q3,1.5 0,0" fill="#3b0764" stroke="#7c3aed" stroke-width="0.4"/></g>
+  <g transform="translate(102,102)"><path class="wB" d="M0,0 Q-5,-4 -10,0 Q-5,2 0,0 Q5,-4 10,0 Q5,2 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.5"/></g>
+</g>
+<g class="b2">
+  <g transform="translate(130,74)"><path class="wA" d="M0,0 Q-7,-5 -13,0 Q-7,2.5 0,0 Q7,-5 13,0 Q7,2.5 0,0" fill="#1e1b4b" stroke="#a855f7" stroke-width="0.5"/></g>
+  <g transform="translate(112,82)"><path class="wB" d="M0,0 Q-5,-4 -9,0 Q-5,1.8 0,0 Q5,-4 9,0 Q5,1.8 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.45"/></g>
+  <g transform="translate(98,88)"><path class="wC" d="M0,0 Q-3,-3 -6,0 Q-3,1.5 0,0 Q3,-3 6,0 Q3,1.5 0,0" fill="#3b0764" stroke="#7c3aed" stroke-width="0.35"/></g>
+</g>
+<g class="b3">
+  <g transform="translate(200,58)"><path class="wC" d="M0,0 Q-4,-3 -7,0 Q-4,1.2 0,0 Q4,-3 7,0 Q4,1.2 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.35"/></g>
+  <g transform="translate(186,65)"><path class="wC" d="M0,0 Q-3,-2.5 -6,0 Q-3,1 0,0 Q3,-2.5 6,0 Q3,1 0,0" fill="#4c1d95" stroke="#8b5cf6" stroke-width="0.3"/></g>
+  <g transform="translate(173,70)"><path class="wC" d="M0,0 Q-2.5,-2 -5,0 Q-2.5,0.8 0,0 Q2.5,-2 5,0 Q2.5,0.8 0,0" fill="#4c1d95" stroke="#7c3aed" stroke-width="0.25"/></g>
+  <g transform="translate(162,74)"><path class="wC" d="M0,0 Q-2,-2 -4,0 Q-2,0.8 0,0 Q2,-2 4,0 Q2,0.8 0,0" fill="#4c1d95" stroke="#7c3aed" stroke-width="0.25"/></g>
+</g>
+<g class="nm">
+  <rect x="326" y="130" width="248" height="62" rx="12" fill="#03001e" opacity="0.72"/>
+  <rect x="326" y="130" width="248" height="62" rx="12" fill="none" stroke="#7c3aed" stroke-width="1.2" opacity="0.8"/>
+  <text x="450" y="158" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" fill="#c4b5fd" letter-spacing="3">REZOSND</text>
+  <text x="450" y="178" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#7c3aed" letter-spacing="1.5">rezosnd · KIIT · India</text>
+</g>
+</g>
 </svg>
