@@ -1,0 +1,408 @@
+<svg width="100%" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Animated nature landscape with birds, sun, trees and mountains</title>
+  <desc>A beautiful animated scene featuring a rising sun, flying birds, pine trees, rolling hills and mountains for Sourav ND's GitHub profile</desc>
+
+  <defs>
+    <!-- Sky gradient: deep purple to violet dawn -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="40%" stop-color="#302b63"/>
+      <stop offset="75%" stop-color="#553c9a"/>
+      <stop offset="100%" stop-color="#e96c2e" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Sun glow -->
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff7aa"/>
+      <stop offset="40%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sun halo -->
+    <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#f97316" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mountain gradient -->
+    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b21b6"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+
+    <!-- Ground -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f0c29"/>
+    </linearGradient>
+
+    <!-- River shimmer -->
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#c4b5fd" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Fog/mist -->
+    <linearGradient id="mistGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Star filter -->
+    <filter id="starBlur">
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+
+    <!-- Glow filter for sun -->
+    <filter id="sunBlur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <!-- Tree clip -->
+    <clipPath id="sceneClip">
+      <rect x="0" y="0" width="900" height="320"/>
+    </clipPath>
+
+    <!-- Bird path animations -->
+    <style>
+      @keyframes birdFly1 {
+        0%   { transform: translate(-80px, 0px); }
+        100% { transform: translate(980px, -40px); }
+      }
+      @keyframes birdFly2 {
+        0%   { transform: translate(-120px, 0px); }
+        100% { transform: translate(980px, -20px); }
+      }
+      @keyframes birdFly3 {
+        0%   { transform: translate(-60px, 0px); }
+        100% { transform: translate(980px, -60px); }
+      }
+      @keyframes wingFlap {
+        0%, 100% { d: path("M0,0 Q-6,-5 -12,0 Q-6,2 0,0 Q6,-5 12,0 Q6,2 0,0"); }
+        50%       { d: path("M0,0 Q-6,2 -12,0 Q-6,-1 0,0 Q6,2 12,0 Q6,-1 0,0"); }
+      }
+      @keyframes wingFlap2 {
+        0%, 100% { d: path("M0,0 Q-4,-4 -8,0 Q-4,1 0,0 Q4,-4 8,0 Q4,1 0,0"); }
+        50%       { d: path("M0,0 Q-4,1 -8,0 Q-4,-1 0,0 Q4,1 8,0 Q4,-1 0,0"); }
+      }
+      @keyframes sunRise {
+        0%   { transform: translateY(30px); opacity: 0.4; }
+        100% { transform: translateY(0px); opacity: 1; }
+      }
+      @keyframes sunPulse {
+        0%, 100% { r: 22; }
+        50%       { r: 24; }
+      }
+      @keyframes haloPulse {
+        0%, 100% { r: 55; opacity: 0.5; }
+        50%       { r: 62; opacity: 0.7; }
+      }
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0.2; }
+      }
+      @keyframes cloudDrift1 {
+        0%   { transform: translateX(0px); }
+        100% { transform: translateX(60px); }
+      }
+      @keyframes cloudDrift2 {
+        0%   { transform: translateX(0px); }
+        100% { transform: translateX(-40px); }
+      }
+      @keyframes riverShimmer {
+        0%, 100% { opacity: 0.4; }
+        50%       { opacity: 0.85; }
+      }
+      @keyframes mistDrift {
+        0%   { transform: translateX(0px) scaleX(1); opacity: 0.4; }
+        50%  { transform: translateX(15px) scaleX(1.05); opacity: 0.6; }
+        100% { transform: translateX(0px) scaleX(1); opacity: 0.4; }
+      }
+      @keyframes leafSway {
+        0%, 100% { transform: rotate(0deg); }
+        50%       { transform: rotate(2deg); }
+      }
+
+      .bird1 { animation: birdFly1 18s linear infinite; }
+      .bird2 { animation: birdFly2 22s linear 4s infinite; }
+      .bird3 { animation: birdFly3 26s linear 10s infinite; }
+      .wing  { animation: wingFlap 0.5s ease-in-out infinite; }
+      .wing2 { animation: wingFlap2 0.5s ease-in-out infinite; }
+      .sun-group { animation: sunRise 3s ease-out 0.5s both; }
+      .sun-core { animation: sunPulse 4s ease-in-out infinite; }
+      .sun-halo { animation: haloPulse 4s ease-in-out infinite; }
+      .cloud1 { animation: cloudDrift1 30s ease-in-out alternate infinite; }
+      .cloud2 { animation: cloudDrift2 40s ease-in-out alternate infinite; }
+      .river  { animation: riverShimmer 3s ease-in-out infinite; }
+      .mist   { animation: mistDrift 8s ease-in-out infinite; }
+      .pine-group { animation: leafSway 6s ease-in-out infinite; transform-origin: center bottom; }
+      .pine-group2 { animation: leafSway 7s ease-in-out 1s infinite; transform-origin: center bottom; }
+
+      .star1 { animation: starTwinkle 2.1s ease-in-out infinite; }
+      .star2 { animation: starTwinkle 3.4s ease-in-out 0.7s infinite; }
+      .star3 { animation: starTwinkle 1.8s ease-in-out 1.2s infinite; }
+      .star4 { animation: starTwinkle 2.8s ease-in-out 0.3s infinite; }
+      .star5 { animation: starTwinkle 4.0s ease-in-out 1.8s infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .bird1,.bird2,.bird3,.sun-group,.sun-core,.sun-halo,
+        .cloud1,.cloud2,.river,.mist,.pine-group,.pine-group2,
+        .star1,.star2,.star3,.star4,.star5 { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#sceneClip)">
+
+    <!-- ──────── SKY ──────── -->
+    <rect x="0" y="0" width="900" height="320" fill="url(#skyGrad)"/>
+
+    <!-- ──────── STARS ──────── -->
+    <circle class="star1" cx="80"  cy="22" r="1.2" fill="#e2e8f0" filter="url(#starBlur)"/>
+    <circle class="star2" cx="160" cy="15" r="1.0" fill="#c4b5fd" filter="url(#starBlur)"/>
+    <circle class="star3" cx="260" cy="30" r="1.5" fill="#fef3c7" filter="url(#starBlur)"/>
+    <circle class="star4" cx="400" cy="10" r="1.2" fill="#e2e8f0" filter="url(#starBlur)"/>
+    <circle class="star5" cx="540" cy="25" r="1.0" fill="#c4b5fd" filter="url(#starBlur)"/>
+    <circle class="star1" cx="680" cy="18" r="1.3" fill="#fef3c7" filter="url(#starBlur)"/>
+    <circle class="star3" cx="780" cy="8"  r="1.1" fill="#e2e8f0" filter="url(#starBlur)"/>
+    <circle class="star2" cx="840" cy="30" r="1.4" fill="#c4b5fd" filter="url(#starBlur)"/>
+    <circle class="star4" cx="50"  cy="50" r="0.9" fill="#fef3c7" filter="url(#starBlur)"/>
+    <circle class="star5" cx="320" cy="45" r="1.0" fill="#e2e8f0" filter="url(#starBlur)"/>
+    <circle class="star1" cx="600" cy="40" r="0.8" fill="#c4b5fd" filter="url(#starBlur)"/>
+    <circle class="star3" cx="720" cy="55" r="1.2" fill="#fef3c7" filter="url(#starBlur)"/>
+
+    <!-- ──────── SUN (rising glow) ──────── -->
+    <g class="sun-group" style="transform-origin: 450px 108px;">
+      <!-- outer halo glow -->
+      <ellipse cx="450" cy="108" rx="80" ry="70" fill="url(#haloGrad)" filter="url(#sunBlur)" opacity="0.5"/>
+      <!-- soft halo ring -->
+      <circle class="sun-halo" cx="450" cy="108" r="55" fill="none" stroke="#f97316" stroke-width="18" stroke-opacity="0.12"/>
+      <!-- sun disk -->
+      <circle class="sun-core" cx="450" cy="108" r="22" fill="url(#sunGrad)"/>
+      <!-- sun rays (static thin lines) -->
+      <g stroke="#fbbf24" stroke-width="1.2" stroke-linecap="round" opacity="0.55">
+        <line x1="450" y1="74"  x2="450" y2="64"/>
+        <line x1="450" y1="142" x2="450" y2="152"/>
+        <line x1="416" y1="108" x2="406" y2="108"/>
+        <line x1="484" y1="108" x2="494" y2="108"/>
+        <line x1="426" y1="84"  x2="419" y2="77"/>
+        <line x1="474" y1="84"  x2="481" y2="77"/>
+        <line x1="426" y1="132" x2="419" y2="139"/>
+        <line x1="474" y1="132" x2="481" y2="139"/>
+      </g>
+    </g>
+
+    <!-- ──────── CLOUDS ──────── -->
+    <!-- Cloud 1 -->
+    <g class="cloud1" opacity="0.55">
+      <ellipse cx="170" cy="68" rx="50" ry="18" fill="#c4b5fd" opacity="0.5"/>
+      <ellipse cx="140" cy="74" rx="32" ry="14" fill="#a78bfa" opacity="0.4"/>
+      <ellipse cx="200" cy="72" rx="35" ry="13" fill="#c4b5fd" opacity="0.45"/>
+    </g>
+    <!-- Cloud 2 -->
+    <g class="cloud2" opacity="0.45">
+      <ellipse cx="720" cy="55" rx="55" ry="16" fill="#ddd6fe" opacity="0.4"/>
+      <ellipse cx="690" cy="60" rx="36" ry="13" fill="#c4b5fd" opacity="0.35"/>
+      <ellipse cx="750" cy="58" rx="38" ry="12" fill="#ddd6fe" opacity="0.4"/>
+    </g>
+    <!-- Cloud 3 small -->
+    <g opacity="0.3">
+      <ellipse cx="580" cy="80" rx="38" ry="12" fill="#ede9fe" opacity="0.4"/>
+      <ellipse cx="560" cy="84" rx="24" ry="10" fill="#c4b5fd" opacity="0.3"/>
+    </g>
+
+    <!-- ──────── BACK MOUNTAINS ──────── -->
+    <!-- Far mountains (lightest) -->
+    <polygon points="0,240 100,130 200,210 280,150 380,200 460,155 540,195 620,145 700,195 780,140 900,200 900,240" fill="#2e1065" opacity="0.5"/>
+    <!-- Mid mountains -->
+    <polygon points="0,260 80,160 160,220 250,170 340,215 430,165 520,210 600,155 700,210 790,160 900,215 900,260" fill="url(#mtn1)"/>
+    <!-- Front mountains -->
+    <polygon points="0,280 60,190 140,240 220,185 320,235 420,175 500,230 600,170 700,225 800,175 900,230 900,280" fill="url(#mtn2)"/>
+    <!-- Snow caps -->
+    <polygon points="60,190 80,175 100,190" fill="#e2e8f0" opacity="0.85"/>
+    <polygon points="220,185 240,168 260,185" fill="#e2e8f0" opacity="0.75"/>
+    <polygon points="420,175 450,155 475,175" fill="#e2e8f0" opacity="0.8"/>
+    <polygon points="600,170 625,150 650,170" fill="#e2e8f0" opacity="0.75"/>
+    <polygon points="800,175 820,158 840,175" fill="#e2e8f0" opacity="0.8"/>
+
+    <!-- ──────── MIST LAYER ──────── -->
+    <g class="mist">
+      <rect x="0" y="255" width="900" height="35" fill="url(#mistGrad)" rx="8"/>
+    </g>
+
+    <!-- ──────── GROUND / ROLLING HILLS ──────── -->
+    <!-- Hill back -->
+    <path d="M0,285 Q150,255 300,275 Q450,295 600,265 Q750,240 900,270 L900,320 L0,320 Z" fill="url(#groundGrad)" opacity="0.85"/>
+    <!-- Hill front -->
+    <path d="M0,300 Q200,280 400,295 Q600,310 800,290 Q860,285 900,295 L900,320 L0,320 Z" fill="#1e1b4b"/>
+
+    <!-- ──────── RIVER / WATER ──────── -->
+    <ellipse class="river" cx="450" cy="300" rx="190" ry="8" fill="url(#riverGrad)"/>
+    <ellipse class="river" cx="450" cy="304" rx="120" ry="4" fill="#c4b5fd" opacity="0.2"/>
+
+    <!-- ──────── PINE TREES (LEFT SIDE) ──────── -->
+    <g class="pine-group">
+      <!-- trunk -->
+      <rect x="97" y="252" width="6" height="28" fill="#3b1f0e"/>
+      <!-- pine layers (bottom to top, widening) -->
+      <polygon points="100,254 78,284 122,284" fill="#14532d"/>
+      <polygon points="100,242 82,268 118,268" fill="#166534"/>
+      <polygon points="100,232 86,255 114,255" fill="#15803d"/>
+      <polygon points="100,224 89,244 111,244" fill="#16a34a"/>
+    </g>
+    <g class="pine-group2" style="transform-origin: 70px 280px;">
+      <rect x="67" y="258" width="5" height="22" fill="#3b1f0e"/>
+      <polygon points="70,260 52,282 88,282" fill="#14532d"/>
+      <polygon points="70,250 55,268 85,268" fill="#166534"/>
+      <polygon points="70,242 58,257 82,257" fill="#15803d"/>
+      <polygon points="70,235 61,248 79,248" fill="#16a34a"/>
+    </g>
+    <!-- Smaller pine far left -->
+    <g>
+      <rect x="27" y="264" width="4" height="16" fill="#3b1f0e"/>
+      <polygon points="29,265 15,280 43,280" fill="#14532d"/>
+      <polygon points="29,258 18,272 40,272" fill="#166534"/>
+      <polygon points="29,252 20,264 38,264" fill="#15803d"/>
+    </g>
+
+    <!-- ──────── PINE TREES (RIGHT SIDE) ──────── -->
+    <g class="pine-group2">
+      <rect x="803" y="252" width="6" height="28" fill="#3b1f0e"/>
+      <polygon points="806,254 784,284 828,284" fill="#14532d"/>
+      <polygon points="806,242 788,268 824,268" fill="#166534"/>
+      <polygon points="806,232 792,255 820,255" fill="#15803d"/>
+      <polygon points="806,224 795,244 817,244" fill="#16a34a"/>
+    </g>
+    <g class="pine-group">
+      <rect x="833" y="258" width="5" height="22" fill="#3b1f0e"/>
+      <polygon points="835,260 817,282 853,282" fill="#14532d"/>
+      <polygon points="835,250 820,268 850,268" fill="#166534"/>
+      <polygon points="835,242 823,257 847,257" fill="#15803d"/>
+      <polygon points="835,235 826,248 844,248" fill="#16a34a"/>
+    </g>
+    <!-- Tall pine far right -->
+    <g>
+      <rect x="868" y="248" width="6" height="32" fill="#3b1f0e"/>
+      <polygon points="871,250 849,284 893,284" fill="#14532d"/>
+      <polygon points="871,238 853,266 889,266" fill="#166534"/>
+      <polygon points="871,228 856,251 886,251" fill="#15803d"/>
+      <polygon points="871,220 858,241 884,241" fill="#16a34a"/>
+      <polygon points="871,214 861,232 881,232" fill="#22c55e" opacity="0.8"/>
+    </g>
+
+    <!-- ──────── MID-GROUND TREES ──────── -->
+    <!-- Center-left tree cluster -->
+    <g class="pine-group" style="transform-origin:200px 285px;">
+      <rect x="197" y="263" width="5" height="17" fill="#3b1f0e"/>
+      <polygon points="200,265 183,282 217,282" fill="#14532d" opacity="0.9"/>
+      <polygon points="200,256 186,270 214,270" fill="#166534" opacity="0.9"/>
+      <polygon points="200,249 189,261 211,261" fill="#15803d" opacity="0.9"/>
+    </g>
+    <!-- Center-right tree -->
+    <g class="pine-group2" style="transform-origin:680px 285px;">
+      <rect x="677" y="263" width="5" height="17" fill="#3b1f0e"/>
+      <polygon points="680,265 663,282 697,282" fill="#14532d" opacity="0.9"/>
+      <polygon points="680,256 666,270 694,270" fill="#166534" opacity="0.9"/>
+      <polygon points="680,249 669,261 691,261" fill="#15803d" opacity="0.9"/>
+    </g>
+
+    <!-- ──────── FLYING BIRDS ──────── -->
+    <!-- Bird 1 (large, leading) -->
+    <g class="bird1">
+      <g transform="translate(80, 90)">
+        <path class="wing" d="M0,0 Q-6,-5 -12,0 Q-6,2 0,0 Q6,-5 12,0 Q6,2 0,0" fill="#1e1b4b" stroke="#7c3aed" stroke-width="0.5"/>
+        <ellipse cx="0" cy="0" rx="2" ry="1.2" fill="#2e1065"/>
+      </g>
+    </g>
+    <!-- Bird 1b (tight formation) -->
+    <g class="bird1">
+      <g transform="translate(60, 98)">
+        <path class="wing2" d="M0,0 Q-4,-4 -8,0 Q-4,1 0,0 Q4,-4 8,0 Q4,1 0,0" fill="#2e1065" stroke="#a855f7" stroke-width="0.4"/>
+      </g>
+    </g>
+    <g class="bird1">
+      <g transform="translate(40, 104)">
+        <path class="wing2" d="M0,0 Q-4,-4 -8,0 Q-4,1 0,0 Q4,-4 8,0 Q4,1 0,0" fill="#2e1065" stroke="#a855f7" stroke-width="0.4"/>
+      </g>
+    </g>
+
+    <!-- Bird 2 (medium group, delayed) -->
+    <g class="bird2">
+      <g transform="translate(120, 70)">
+        <path class="wing" d="M0,0 Q-5,-4 -10,0 Q-5,1.5 0,0 Q5,-4 10,0 Q5,1.5 0,0" fill="#1e1b4b" stroke="#7c3aed" stroke-width="0.5"/>
+      </g>
+    </g>
+    <g class="bird2">
+      <g transform="translate(100, 80)">
+        <path class="wing2" d="M0,0 Q-4,-3 -8,0 Q-4,1 0,0 Q4,-3 8,0 Q4,1 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.4"/>
+      </g>
+    </g>
+    <g class="bird2">
+      <g transform="translate(88, 87)">
+        <path class="wing2" d="M0,0 Q-3,-3 -6,0 Q-3,1 0,0 Q3,-3 6,0 Q3,1 0,0" fill="#2e1065" stroke="#8b5cf6" stroke-width="0.3"/>
+      </g>
+    </g>
+
+    <!-- Bird 3 (small distant flock) -->
+    <g class="bird3">
+      <g transform="translate(200, 55)">
+        <path class="wing2" d="M0,0 Q-3,-2 -6,0 Q-3,0.8 0,0 Q3,-2 6,0 Q3,0.8 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.3"/>
+      </g>
+    </g>
+    <g class="bird3">
+      <g transform="translate(185, 62)">
+        <path class="wing2" d="M0,0 Q-2.5,-2 -5,0 Q-2.5,0.8 0,0 Q2.5,-2 5,0 Q2.5,0.8 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.3"/>
+      </g>
+    </g>
+    <g class="bird3">
+      <g transform="translate(170, 67)">
+        <path class="wing2" d="M0,0 Q-2,-2 -4,0 Q-2,0.6 0,0 Q2,-2 4,0 Q2,0.6 0,0" fill="#4c1d95" stroke="#a855f7" stroke-width="0.25"/>
+      </g>
+    </g>
+    <g class="bird3">
+      <g transform="translate(158, 71)">
+        <path class="wing2" d="M0,0 Q-2,-2 -4,0 Q-2,0.6 0,0 Q2,-2 4,0 Q2,0.6 0,0" fill="#4c1d95" stroke="#8b5cf6" stroke-width="0.25"/>
+      </g>
+    </g>
+
+    <!-- ──────── MOON (crescent, top-left) ──────── -->
+    <g opacity="0.75">
+      <circle cx="120" cy="38" r="14" fill="#fef3c7" opacity="0.9"/>
+      <circle cx="126" cy="34" r="12" fill="#0f0c29"/>
+    </g>
+
+    <!-- ──────── FOREGROUND GRASS BLADES ──────── -->
+    <g stroke="#14532d" stroke-width="1.2" stroke-linecap="round" opacity="0.7">
+      <line x1="20"  y1="318" x2="18"  y2="306"/>
+      <line x1="25"  y1="318" x2="28"  y2="305"/>
+      <line x1="35"  y1="318" x2="33"  y2="308"/>
+      <line x1="150" y1="318" x2="148" y2="307"/>
+      <line x1="158" y1="318" x2="161" y2="306"/>
+      <line x1="300" y1="318" x2="298" y2="309"/>
+      <line x1="310" y1="318" x2="313" y2="308"/>
+      <line x1="500" y1="318" x2="498" y2="307"/>
+      <line x1="508" y1="318" x2="511" y2="309"/>
+      <line x1="650" y1="318" x2="648" y2="308"/>
+      <line x1="660" y1="318" x2="663" y2="307"/>
+      <line x1="750" y1="318" x2="748" y2="309"/>
+      <line x1="760" y1="318" x2="763" y2="308"/>
+      <line x1="870" y1="318" x2="868" y2="307"/>
+      <line x1="880" y1="318" x2="883" y2="308"/>
+    </g>
+
+    <!-- ──────── FIREFLIES / LIGHT DOTS (foreground) ──────── -->
+    <circle class="star1" cx="320" cy="290" r="1.5" fill="#fde68a" opacity="0.8" filter="url(#starBlur)"/>
+    <circle class="star3" cx="580" cy="285" r="1.2" fill="#fde68a" opacity="0.7" filter="url(#starBlur)"/>
+    <circle class="star2" cx="420" cy="295" r="1.0" fill="#fde68a" opacity="0.65" filter="url(#starBlur)"/>
+
+  </g>
+</svg>
