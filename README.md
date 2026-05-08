@@ -2,15 +2,13 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1d4ed8,100:0ea5e9&height=180&section=header&text=REZOSND&fontSize=64&fontColor=ffffff&fontAlignY=36&desc=AI%20%7C%20Robotics%20%7C%20Full-Stack%20Engineering&descSize=14&descAlignY=58" width="100%"/>
 
-### Building practical intelligent systems
-
 <img src="https://komarev.com/ghpvc/?username=rezosnd&style=for-the-badge&color=2563eb&label=PROFILE+VIEWS"/>
 <img src="https://img.shields.io/github/followers/rezosnd?style=for-the-badge&color=1d4ed8&label=FOLLOWERS"/>
 
 </div>
 
 ## About
-I am a B.Tech Information Technology student at KIIT University, focused on building reliable products across AI, robotics, and full-stack development.
+I am a B.Tech Information Technology student at KIIT University, focused on building reliable products across AI, robotics, and full-stack development. Recent work includes autonomous vision-guided robotics and practical edge AI prototypes.
 
 ## Focus Areas
 - Applied AI and Machine Learning
