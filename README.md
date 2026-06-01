@@ -11,7 +11,7 @@
 I am a B.Tech Information Technology student at KIIT University, focused on building reliable products across AI, robotics, and full-stack development. Recent work includes autonomous vision-guided robotics and practical edge AI prototypes.
 
 ## Focus Areas
-- Applied AI and Machine Learning
+- Applied AI and Machine Learning.
 - Robotics and Embedded Systems
 - Full-Stack Web Development
 - Edge and IoT Solutions
