@@ -1,48 +1,48 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050505,50:4f46e5,100:06b6d4&height=180&section=header&text=Ayush%20(REZOSND)&fontSize=60&fontColor=00ffff&fontAlignY=36&desc=Architecting%20Solutions%20%40%20VeritasCo%20%7C%20Full-Stack%20%7C%20AI&descSize=16&descAlignY=58" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:fbc2eb,100:a6c1ee&height=180&section=header&text=Rehan%20Suman&fontSize=64&fontColor=ffffff&fontAlignY=36&desc=Founder%20%40%20VeritasCo%20%7C%20Full-Stack%20Engineer%20%7C%20AI%20Enthusiast&descSize=16&descAlignY=58" width="100%"/>
 
-<img src="https://komarev.com/ghpvc/?username=rezosnd&style=for-the-badge&color=8b5cf6&label=PROFILE+VIEWS"/>
-<img src="https://img.shields.io/github/followers/rezosnd?style=for-the-badge&color=06b6d4&label=FOLLOWERS"/>
+<img src="https://komarev.com/ghpvc/?username=rezosnd&style=for-the-badge&color=ffb6c1&label=PROFILE+VIEWS"/>
+<img src="https://img.shields.io/github/followers/rezosnd?style=for-the-badge&color=ff69b4&label=FOLLOWERS"/>
 
 <br><br>
-<img src="https://media.giphy.com/media/qgQUggCG34j4xQ3W9B/giphy.gif" width="100%" height="250" style="border-radius: 10px; object-fit: cover;" alt="8-bit retro coder room"/>
+<img src="https://media.giphy.com/media/VbO834QIfR4wEcxpZ2/giphy.gif" width="100%" height="250" style="border-radius: 15px; object-fit: cover;" alt="Cozy floral coding room"/>
 </div>
 
-## 👾 System Initialization...
+## 🌸 Welcome to my Digital Garden
 
-> Initializing from the dev environment: a neon-lit coding room fueled by caffeine and 8-bit retro beats. Currently engineering the future as the Founder of **VeritasCo**.
+> Brewing coffee in my cozy coding room, surrounded by plants and building the future as the Founder of **VeritasCo**. Cultivating clean code, scalable systems, and beautiful user experiences.
 
-I am a 3rd-year B.Tech Information Technology student at KIIT, focused on building reliable, high-performance products across full-stack development, AI, and robotics. When I'm not studying, I'm scaling startups, designing futuristic UIs, and deploying robust backend architectures.
+I am a 3rd-year B.Tech Information Technology student at KIIT, focused on growing ideas into reliable, high-performance products. Whether it's nurturing a full-stack application, pruning an AI model, or designing seamless UI components, I thrive where technology meets creativity.
 
-### 🚀 Current Directives
-*   🏢 **Building:** **VeritasCo** — driving innovation, initiating internship drives, and crafting next-gen tech solutions.
-*   💻 **Engineering:** Full-stack web and mobile applications with an emphasis on seamless UX and scalable databases.
+### 🌿 Currently Cultivating
+*   🏢 **Growing:** **VeritasCo** — planting the seeds of innovation, leading internship drives, and crafting next-gen tech solutions.
+*   💻 **Engineering:** Full-stack web and mobile applications with an emphasis on seamless UX and robust databases.
 *   🤖 **Exploring:** Applied AI, vision-guided robotics, and practical edge IoT prototypes.
 
 ---
 
-## ⚙️ Tech Arsenal
+## 🌺 Tech Ecosystem
 
 <div align="center">
 
 | 🎨 Front-End & UI | 🛠️ Back-End & DBs | 🧠 AI, Robotics & Tools |
 | :---: | :---: | :---: |
-| Next.js <br> React Native <br> Tailwind CSS <br> JavaScript / TypeScript | Node.js / Express <br> Prisma ORM <br> PostgreSQL <br> MongoDB (Atlas) | Python / C++ / C <br> OpenCV / TensorFlow <br> Docker & Git <br> Vercel & Supabase |
+| Next.js <br> React Native <br> Tailwind CSS <br> JavaScript / TypeScript | Node.js / Express <br> Prisma ORM <br> PostgreSQL <br> MongoDB | Python / C++ / C <br> OpenCV / TensorFlow <br> Docker & Git <br> Canva / UI Design |
 
 </div>
 
 ---
 
-## 📊 Telemetry & Commits
+## 🌷 GitHub Activity Garden
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rezosnd&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00ffff&icon_color=8b5cf6" width="49%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rezosnd&theme=radical&hide_border=true&background=0D1117&ring=00ffff&fire=8b5cf6&currStreakLabel=00ffff" width="49%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=rezosnd&show_icons=true&hide_border=true&bg_color=fff0f5&title_color=d81b60&text_color=4a4a4a&icon_color=d81b60" width="49%"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rezosnd&hide_border=true&background=fff0f5&ring=d81b60&fire=ff80ab&currStreakLabel=4a4a4a&currStreakNum=d81b60&sideLabels=4a4a4a&sideNums=d81b60&dates=4a4a4a" width="49%"/>
 </div>
 
 ---
 
-## 📡 Establish Connection
+## 🌼 Connect With Me
 <div align="center">
   <a href="https://linkedin.com/in/rezosnd"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://instagram.com/rezosnd"><img src="https://img.shields.io/badge/Instagram-Follow-E1306C?style=for-the-badge&logo=instagram&logoColor=white"/></a>
@@ -51,6 +51,6 @@ I am a 3rd-year B.Tech Information Technology student at KIIT, focused on buildi
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:4f46e5,100:050505&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:a6c1ee,100:fbc2eb&height=120&section=footer" width="100%"/>
 
 </div>
