@@ -9,7 +9,7 @@
 <img src="https://media.giphy.com/media/qgQUggCG34j4xQ3W9B/giphy.gif" width="100%" height="250" style="border-radius: 12px; object-fit: cover;" alt="Dark Coding Workspace"/>
 </div>
 
-## 🌸 System Initialization...
+## 🐺 System Initialization...
 
 > Building robust systems from the command line. Currently scaling **VeritasCo** and engineering high-performance tech solutions in a dark-mode workspace. 
 
@@ -22,7 +22,7 @@ I am a 3rd-year B.Tech Information Technology student at KIIT University, focuse
 
 ---
 
-> Want to know what I'm currently cultivating? 🌺
+> Want to know what I'm currently cultivating? 🐺
 > Checkout [VeritasCo's progress](#)
 > 
 > *PS: I'm currently blending futuristic digital architectures with organic coding environments!*
